@@ -56,7 +56,11 @@ body {
   right: 10px;
   top: 10px;
 }
-
+.box .fr{
+  position: absolute;
+  right: 5px;
+  bottom: 30px;
+}
 .navbar{
   background-color: #fff;
   padding: 20px;

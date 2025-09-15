@@ -27,6 +27,7 @@ export default function RootLayout({ children }) {
                 <Link href="/data">자료실</Link>
                 <Link href="/bbs">게시판</Link>
                 <Link href="/notice">공지사항</Link>
+                <Link href="/popular">인기과목</Link>
             </div>
         {children}
       </body>
