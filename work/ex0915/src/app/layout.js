@@ -28,6 +28,7 @@ export default function RootLayout({ children }) {
                 <Link href="/bbs">게시판</Link>
                 <Link href="/notice">공지사항</Link>
                 <Link href="/popular">인기과목</Link>
+                <Link href="/list">방명록</Link> {/* Link는 a태그 역할 */}
             </div>
         {children}
       </body>
