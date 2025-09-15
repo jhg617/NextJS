@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <div className="navbar">
-                <Link href="/">Home</Link>
+                <Link href="/"><img src={`/images/logo.png`} className="logo"/></Link>
                 <Link href="/lean">학습과목</Link>
                 <Link href="/data">자료실</Link>
             </div>

@@ -67,7 +67,14 @@ body {
   text-decoration: none;
 }
 
+.logo{ width: 160px; }
 
+.book{
+  width: 70px;
+  position: absolute;
+  left: 10px;
+  bottom: 3px;
+}
 
 * {
   box-sizing: border-box;

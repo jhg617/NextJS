@@ -3,7 +3,7 @@ function Page(){
     let title = "자료실";
 
     let ar1 = ['자바바이블 예제', '스프링 용어집', 'AI활용'];
-    let ar2 = ['2025-9-2', '2025-9-3', '2025-9-5'];
+    let ar2 = ['2025-09-02', '2025-09-03', '2025-09-05'];
 
     return(
         <div>
@@ -13,12 +13,15 @@ function Page(){
                     전달하면서 반복하는 문장! */
                 ar1.map(function(data, i){ /* 배열에 값을 가져와서 함수호출 */
                     return(
-                        <p className="box" key={i}> {/* key는 중복되지 않는 값이다. */}
+                        <div className="box" key={i}> {/* key는 중복되지 않는 값이다. */}
                             <header>
                                 <h4>{data}</h4>
-                                <p>2025-9-2</p>
+                                <p>{ar2[i]}</p>
+                                <div>
+                                    <img src={`/images/book${i+1}.png`} className="book"/>
+                                </div>
                             </header>
-                        </p>
+                        </div>
                     );
                 })
             }
