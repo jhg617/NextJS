@@ -68,13 +68,25 @@ body {
 }
 
 .logo{ width: 160px; }
-
 .book{
   width: 70px;
   position: absolute;
   left: 10px;
   bottom: 3px;
 }
+
+table.t1{
+  border-collapse: collapse;
+  width: 500px;
+  margin: 10px auto; /* 가운데 맞춤 */
+}
+
+table.t1 th, table.t1 td{ /* table안에 th, td */
+  border: 1px solid #fff;
+  padding: 5px;
+}
+
+
 
 * {
   box-sizing: border-box;

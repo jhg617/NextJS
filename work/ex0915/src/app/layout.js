@@ -25,6 +25,8 @@ export default function RootLayout({ children }) {
                 <Link href="/"><img src={`/images/logo.png`} className="logo"/></Link>
                 <Link href="/lean">학습과목</Link>
                 <Link href="/data">자료실</Link>
+                <Link href="/bbs">게시판</Link>
+                <Link href="/notice">공지사항</Link>
             </div>
         {children}
       </body>
