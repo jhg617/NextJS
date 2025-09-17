@@ -1,0 +1,12 @@
+import Nav from "./Nav";
+
+export default function Header(){
+    return(
+        <div>
+            <div style={{width: '90%', margin: 'auto', padding: '20px'}}>
+                <img src="/images/logo.png" alt="logo"/>
+                <Nav/>
+            </div>
+        </div>
+    );
+};

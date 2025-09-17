@@ -17,12 +17,6 @@ export default function Page() {
         });
     }
 
-    /*
-    useEffect(function(){
-        callAPI();
-    },[]);
-    */
-
     useEffect(()=>{
         callAPI();
     },[]); // [] : 현재 페이지가 열릴 때 한번 수행!
