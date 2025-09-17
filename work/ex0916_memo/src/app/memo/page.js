@@ -13,6 +13,7 @@ export default function Page() {
     function callAPI(){
         axios.get(api_url).then(function(response){ //response: 개발자가 명명
             setList(response.data.m_list);
+            console.log("list" + response.data.m_list)
         });
     }
 
