@@ -45,7 +45,7 @@ a {
   background-color: #fff;
   padding: 20px;
 }
-.navBar a{ /* Link를 a태그로 지정해야함! */
+.navBar a{
   margin-right: 10px;
   text-decoration: none;
 }
@@ -54,6 +54,7 @@ a {
   right: 0;
   top: 0;
 }
+
 .navBar, .fr{
   padding: 20px;
 }
@@ -68,11 +69,7 @@ table.t1{
   width: 500px;
   margin: 10px auto;
 }
-
 table.t1 th, table.t1 td{
-  border: 1px solid #000;
+  border: 1px solid black;
   padding: 4px;
-}
-table.t1 button{
-  padding: 5px;
 }
