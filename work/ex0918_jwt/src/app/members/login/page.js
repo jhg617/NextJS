@@ -4,26 +4,38 @@ import Link from "next/link";
 import styles from '../../page.module.css';
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import tokenStore from "@/app/store/TokenStore";
+import axios from "axios";
 
 export default function Page(){
 
         const [member, setMember] = useState({});
-
         const router = useRouter();
-    
-        function handleChange(e){
-            const {name, value} = e.target;
-            setBbs({...member, [name]: value})
-            console.log({...member, [name]: value})
-        }
+
+        const {accessToken, setToken} = tokenStore();
+        let api_url = "/api/members/login";
 
         function signIn(){
-            // 비동기식 통신(스프링부트 서버 호출)
+            axios.post(
+                api_url, JSON.stringify(member),
+                {
+                    withCredentials: true,
+                    headers:{
+                        "Content-Type":"application/json"
+                    }
+                }
+            ).then(function(res){
+                if(res.status == 200){
+                    setToken(res.data.data.accessToken);
+                    router.push("/"); // 메인화면으로 이동
+                }
+            });
+        }
 
-            // 정상적으로 서버로부터 처리가 되었는지 확인
-
-            // 받은 토큰을 저장(store 개념)
-            router.push('/')
+        function handleChange(e){
+            const {name, value} = e.target;
+            setMember({...member, [name]: value})
+            console.log({...member, [name]: value})
         }
 
     return(
